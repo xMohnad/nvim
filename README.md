@@ -2,6 +2,8 @@
 
 A custom Neovim setup built from scratch with LSP, completions, and useful plugins for an efficient modern development workflow.
 
+[![Neovim Preview](./.screenshots/neovim_preview.jpg)](./.screenshots/neovim_preview.jpg)
+
 ## Usage
 
 1. Install [Neovim 0.11+](https://neovim.io/)
