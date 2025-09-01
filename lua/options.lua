@@ -15,7 +15,7 @@ o.splitkeep = "screen"
 o.termguicolors = true
 
 -- Use system clipboard for all yank/delete/change/put
--- o.clipboard = "unnamedplus" 
+-- o.clipboard = "unnamedplus"
 
 o.cursorline = true
 o.cursorlineopt = "number"
@@ -25,6 +25,7 @@ o.expandtab = true
 o.smartindent = true
 o.shiftwidth = 2
 o.tabstop = 2
+o.softtabstop = 2
 o.wrap = false
 
 opt.fillchars = { eob = " " }
