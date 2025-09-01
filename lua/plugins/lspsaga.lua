@@ -1,0 +1,45 @@
+return {
+	"nvimdev/lspsaga.nvim",
+	event = "LspAttach",
+	dependencies = { "nvim-treesitter/nvim-treesitter" },
+	config = function()
+		require("lspsaga").setup({
+			lightbulb = { enable = true },
+			ui = { border = "rounded" },
+		})
+		local map = vim.keymap.set
+
+		-- Hover docs
+		map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "Hover doc" })
+
+		-- Rename
+		map("n", "<leader>ra", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
+
+		-- Code actions
+		map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { desc = "Code Action" })
+		map("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", { desc = "Code Action (Visual)" })
+
+		-- Finder (references & definitions)
+		map("n", "gh", "<cmd>Lspsaga finder<CR>", { desc = "LSP Finder" })
+
+		-- Peek definition / type definition
+		map("n", "gpd", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek Definition" })
+		map("n", "gpt", "<cmd>Lspsaga peek_type_definition<CR>", { desc = "Peek Type Definition" })
+
+		-- Diagnostics
+		map("n", "<leader>dl", "<cmd>Lspsaga show_line_diagnostics<CR>", { desc = "Line Diagnostics" })
+		map("n", "<leader>dd", "<cmd>Lspsaga show_buf_diagnostics<CR>", { desc = "Buffer Diagnostics" })
+		map("n", "<leader>dw", "<cmd>Lspsaga show_workspace_diagnostics<CR>", { desc = "Workspace Diagnostics" })
+		map("n", "<leader>dp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "Prev Diagnostic" })
+		map("n", "<leader>dn", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "Next Diagnostic" })
+
+		-- Outline
+		map("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { desc = "Symbols Outline" })
+
+		-- Floating terminal
+		map("n", "<leader>t", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle Terminal" })
+
+		-- Win bar
+		map("n", "<leader>wb", "<cmd>Lspsaga winbar_toggle<CR>", { desc = "Toggle Winbar" })
+	end,
+}
