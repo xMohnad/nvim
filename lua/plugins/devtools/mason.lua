@@ -5,7 +5,6 @@ return {
 	build = ":MasonUpdate",
 	opts = {
 		ensure_installed = {
-			"black",
 			"ruff",
 			"prettier",
 			"stylua",
