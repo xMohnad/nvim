@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-doc-name
 return {
 	"folke/snacks.nvim",
 	priority = 1000,
@@ -359,7 +360,7 @@ return {
 		},
 		-- LSP
 		{
-			"gr",
+			"grd",
 			function()
 				Snacks.picker.lsp_definitions()
 			end,
@@ -373,7 +374,7 @@ return {
 			desc = "Goto Declaration",
 		},
 		{
-			"gr",
+			"grr",
 			function()
 				Snacks.picker.lsp_references()
 			end,
@@ -381,25 +382,18 @@ return {
 			desc = "References",
 		},
 		{
-			"gI",
+			"gri",
 			function()
 				Snacks.picker.lsp_implementations()
 			end,
 			desc = "Goto Implementation",
 		},
 		{
-			"gy",
+			"grt",
 			function()
 				Snacks.picker.lsp_type_definitions()
 			end,
 			desc = "Goto T[y]pe Definition",
-		},
-		{
-			"<leader>ss",
-			function()
-				Snacks.picker.lsp_symbols()
-			end,
-			desc = "LSP Symbols",
 		},
 		{
 			"<leader>sS",

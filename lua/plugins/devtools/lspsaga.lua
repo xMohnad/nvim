@@ -9,18 +9,8 @@ return {
 		})
 		local map = vim.keymap.set
 
-		-- Hover docs
-		map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "Hover doc" })
-
-		-- Rename
-		map("n", "<leader>ra", "<cmd>Lspsaga rename<CR>", { desc = "Rename" })
-
 		-- Code actions
 		map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { desc = "Code Action" })
-		map("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", { desc = "Code Action (Visual)" })
-
-		-- Finder (references & definitions)
-		map("n", "gh", "<cmd>Lspsaga finder<CR>", { desc = "LSP Finder" })
 
 		-- Peek definition / type definition
 		map("n", "gpd", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek Definition" })
@@ -34,7 +24,7 @@ return {
 		map("n", "<leader>dn", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "Next Diagnostic" })
 
 		-- Outline
-		map("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { desc = "Symbols Outline" })
+		map("n", "gro", "<cmd>Lspsaga outline<CR>", { desc = "Symbols Outline" })
 
 		-- Floating terminal
 		map("n", "<leader>t", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle Terminal" })
