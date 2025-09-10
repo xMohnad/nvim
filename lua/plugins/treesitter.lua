@@ -1,6 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	dependencies = { "tadmccorkle/markdown.nvim" },
+	dependencies = { "tadmccorkle/markdown.nvim", "cachebag/nvim-tcss" },
 	event = { "BufReadPost", "BufNewFile" },
 	cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
 	build = ":TSUpdate",
