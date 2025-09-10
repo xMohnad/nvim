@@ -35,6 +35,12 @@ return {
 		},
 	},
 	{
+		"numToStr/Comment.nvim",
+		opts = {
+			-- add any options here
+		},
+	},
+	{
 		"folke/ts-comments.nvim",
 		opts = {},
 		event = "VeryLazy",
