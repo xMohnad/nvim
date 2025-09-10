@@ -57,7 +57,7 @@ autocmd("LspProgress", {
     end, p)
 
     local spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
-    vim.notify(table.concat(msg, "\n"), "info", {
+    vim.notify(table.concat(msg, "\n"), vim.log.levels.INFO, {
       id = "lsp_progress",
       title = client.name,
       opts = function(notif)
