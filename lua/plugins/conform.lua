@@ -23,4 +23,14 @@ return {
 			lsp_format = "fallback",
 		},
 	},
+	keys = {
+		{
+			"<leader>fm",
+			function()
+				require("conform").format({ lsp_fallback = true })
+			end,
+			mode = { "n", "v", "x" },
+			desc = "general format file",
+		},
+	},
 }
