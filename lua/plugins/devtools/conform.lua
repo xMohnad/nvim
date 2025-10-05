@@ -16,6 +16,9 @@ return {
 			html = { "prettier" },
 			json = { "prettier" },
 			javascript = { "prettier" },
+			markdown = { "prettier" },
+			toml = { "taplo" },
+			fish = { "fish_indent" },
 		},
 		format_on_save = {
 			-- These options will be passed to conform.format()
