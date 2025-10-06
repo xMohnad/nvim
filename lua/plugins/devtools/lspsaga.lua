@@ -5,9 +5,10 @@ return {
 	config = function()
 		require("lspsaga").setup({
 			lightbulb = { enable = true },
-			ui = { border = "rounded" },
 		})
 		local map = vim.keymap.set
+
+		map("n", "gK", "<cmd>Lspsaga hover_doc<CR>", { silent = true, desc = "Lspsaga: hover doc" })
 
 		-- Code actions
 		map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { desc = "Code Action" })
@@ -18,8 +19,6 @@ return {
 
 		-- Diagnostics
 		map("n", "<leader>dl", "<cmd>Lspsaga show_line_diagnostics<CR>", { desc = "Line Diagnostics" })
-		map("n", "<leader>dd", "<cmd>Lspsaga show_buf_diagnostics<CR>", { desc = "Buffer Diagnostics" })
-		map("n", "<leader>dw", "<cmd>Lspsaga show_workspace_diagnostics<CR>", { desc = "Workspace Diagnostics" })
 		map("n", "<leader>dp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "Prev Diagnostic" })
 		map("n", "<leader>dn", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "Next Diagnostic" })
 
