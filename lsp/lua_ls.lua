@@ -1,6 +1,7 @@
+---@type vim.lsp.Config
 return {
 	cmd = { "lua-language-server" },
-	filetypes = "lua",
+	filetypes = { "lua" },
 	Lua = {
 		runtime = { version = "LuaJIT" },
 		workspace = {
