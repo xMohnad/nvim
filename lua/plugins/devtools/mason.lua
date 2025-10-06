@@ -5,9 +5,17 @@ return {
 	build = ":MasonUpdate",
 	opts = {
 		ensure_installed = {
-			"ruff",
-			"prettier",
-			"stylua",
+			-- LSPs
+			"basedpyright", -- Python
+			"lua_lsp", -- Lua
+			"fish-lsp", -- Fish shell
+
+			-- Linters
+			"ruff", -- Python
+
+			-- Formatters
+			"prettier", -- JS / JSON / HTML / CSS
+			"stylua", -- Lua
 		},
 		ui = {
 			icons = {
