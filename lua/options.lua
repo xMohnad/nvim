@@ -8,6 +8,7 @@ vim.diagnostic.config({
 	virtual_lines = { current_line = true },
 	virtual_text = false,
 })
+o.winborder = "rounded"
 
 o.laststatus = 3
 o.showmode = false
