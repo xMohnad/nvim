@@ -1,7 +1,6 @@
 return {
-	"mason-org/mason-lspconfig.nvim",
-	dependencies = { "neovim/nvim-lspconfig" },
-	opts = {
-		ensure_installed = { "lua_ls", "basedpyright", "fish-lsp" },
-	},
+	"neovim/nvim-lspconfig",
+	config = function()
+		vim.lsp.enable({ "lua_ls", "basedpyright", "fish-lsp"  })
+	end,
 }
