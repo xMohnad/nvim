@@ -32,7 +32,7 @@ o.wrap = false
 opt.fillchars = { eob = " " }
 o.ignorecase = true
 o.smartcase = true
-o.mouse = "h"
+o.mouse = "a"
 
 -- Numbers
 o.number = true
