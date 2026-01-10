@@ -39,24 +39,11 @@ create_mappings({ "n", "i", "v" }, "<C-A-Up>", {
 
 -- Copy line down with Alt + Ctrl + Down
 create_mappings({ "n", "i", "v" }, "<C-A-Down>", {
-	n = ":t .+1<CR>",
-	i = "<Esc>:t .+1<CR>gi",
-	v = ":t '>+1<CR>gv=gv",
+	n = ":t .+0<CR>",
+	i = "<Esc>:t .+0<CR>gi",
+  v = ":t '>+0<CR>gv=gv",
 }, "Copy line down")
 
--- Optional: Copy line up (gck)
-create_mappings({ "n", "i", "v" }, "gck", {
-	n = ":t .-1<CR>",
-	i = "<Esc>:t .-1<CR>gi",
-	v = ":t '<-1<CR>gv=gv",
-}, "Copy line up")
-
--- Optional: Copy line down (gcj)
-create_mappings({ "n", "i", "v" }, "gcj", {
-	n = ":t .+1<CR>",
-	i = "<Esc>:t .+1<CR>gi",
-	v = ":t '>+1<CR>gv=gv",
-}, "Copy line down")
 
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })
