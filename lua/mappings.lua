@@ -41,9 +41,28 @@ create_mappings({ "n", "i", "v" }, "<C-A-Up>", {
 create_mappings({ "n", "i", "v" }, "<C-A-Down>", {
 	n = ":t .+0<CR>",
 	i = "<Esc>:t .+0<CR>gi",
-  v = ":t '>+0<CR>gv=gv",
+	v = ":t '>+0<CR>gv=gv",
 }, "Copy line down")
 
+-- git
+create_mappings({ "n", "v" }, "<leader>ga", {
+	n = "<cmd>Gitsigns stage_hunk<CR>",
+	v = "<cmd>'<,'>Gitsigns stage_hunk<CR>",
+}, "Git Stage hunk(s)")
+
+create_mappings({ "n", "v" }, "<leader>gu", {
+	n = "<cmd>Gitsigns undo_stage_hunk<CR>",
+	v = "<cmd>'<,'>Gitsigns undo_stage_hunk<CR>",
+}, "Git Undo hunk(s)")
+
+map("n", "<leader>gv", "<cmd>Gitsigns select_hunk<CR>", { desc = "Git Select hunk(s)" })
+map("n", "<leader>gn", "<cmd>Gitsigns next_hunk<CR>", { desc = "Git Next hunk(s)" })
+map("n", "<leader>gp", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Git Prev hunk(s)" })
+
+create_mappings({ "n", "v" }, "<leader>gr", {
+	n = "<cmd>Gitsigns reset_hunk<CR>",
+	v = "<cmd>'<,'>Gitsigns reset_hunk<CR>",
+}, "Git Reset hunk(s)")
 
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })
