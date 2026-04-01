@@ -16,10 +16,12 @@ return {
 			html = { "prettier" },
 			json = { "prettier" },
 			javascript = { "prettier" },
+			typescript = { "prettier" },
 			markdown = { "prettier" },
 			toml = { "taplo" },
 			fish = { "fish_indent" },
 			cpp = { "clang_format" },
+			-- kotlin = { "ktlint" },
 		},
 		format_on_save = {
 			-- These options will be passed to conform.format()
